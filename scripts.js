@@ -3,22 +3,17 @@ var map = L.map('map').setView([47.25, -122.44], 11);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
-    id: 'mapbox/navigation-day-v1',
+    id: 'mapbox/navigation-night-v1',
     accessToken: 'pk.eyJ1IjoidHJpZ2VvIiwiYSI6ImNsOXlmZXlheTA0a3kzdmxuemE5MHVsMnQifQ.abEIHxGUIn-Yz1IwcRTT7Q',
 }).addTo(map);
 
 var control = L.Routing.control({
-    waypoints: [
-        // L.latLng(47.246587, -122.438830),
-        // L.latLng(47.318017, -122.542970)
-        
-    ],
     units:'imperial',
     collapsible: true,
     show: false,
     geocoder: L.Control.Geocoder.photon(),
+    routeWhileDragging: true,
     router: L.Routing.mapbox('pk.eyJ1IjoidHJpZ2VvIiwiYSI6ImNsOXlmZXlheTA0a3kzdmxuemE5MHVsMnQifQ.abEIHxGUIn-Yz1IwcRTT7Q'),
-    routeWhileDragging: true
 }).addTo(map);
 
 function createButton(label, container) {
