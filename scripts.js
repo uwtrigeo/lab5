@@ -46,18 +46,3 @@ map.on('click', function(e) {
  });
 
 // Text box overlay
-L.Control.textbox = L.Control.extend({
-    onAdd: function(map) {
-        
-    var text = L.DomUtil.create('div');
-    text.id = "info_text";
-    text.innerHTML = "<strong>text here</strong>"
-    return text;
-    },
-
-    onRemove: function(map) {
-        // Nothing to do here
-    }
-});
-L.control.textbox = function(opts) { return new L.Control.textbox(opts);}
-L.control.textbox({ position: 'bottomleft' }).addTo(map);
