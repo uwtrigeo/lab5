@@ -8,6 +8,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/256/{z}/{x}/{y}?access_
 }).addTo(map);
 
 var control = L.Routing.control({
+    waypoints:[null],
     units:'imperial',
     collapsible: true,
     show: false,
@@ -42,3 +43,4 @@ map.on('click', function(e) {
             map.closePopup();
         });
  });
+
