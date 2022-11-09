@@ -18,4 +18,12 @@ p{
    text-align: center;
    font-family: 'Montserrat', sans-serif;
 }
-/* Text Box Overlay */
+/* Text Box Overlay - not currently working*/
+.textBoxStyle {
+  padding:5px 10px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  border-radius: 5px;
+}
