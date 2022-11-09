@@ -6,7 +6,7 @@ body {
 #map {
    position: absolute;
    width: 100vw;
-   height: 80vh;
+   height: 90vh;
    
 }
  
@@ -18,7 +18,7 @@ p{
    text-align: center;
    font-family: 'Montserrat', sans-serif;
 }
-/* Text Box Overlay - not currently working*/
+/* Text Box Overlay*/
 .textBoxStyle {
   padding:5px 10px;
   background: rgba(0,0,0,0.5);
