@@ -51,3 +51,18 @@ map.on('click', function(e) {
  });
 
 // Text box overlay TBD unable to get it to work https://stackoverflow.com/questions/33767463/overlaying-a-text-box-on-a-leaflet-js-map
+L.Control.textbox = L.Control.extend({
+    onAdd: function(map) {
+        
+    var text = L.DomUtil.create('div');
+    text.id = "info_text";
+    text.innerHTML = "<strong>text here</strong>"
+    return text;
+    },
+
+    onRemove: function(map) {
+        // Nothing to do here
+    }
+});
+L.control.textbox = function(opts) { return new L.Control.textbox(opts);}
+L.control.textbox({ position: 'bottomleft'}).addTo(map);
